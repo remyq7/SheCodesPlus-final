@@ -14,11 +14,7 @@ h1 {
 }
 .main-submit {
   display: inline;
-  position: relative;
-  top: -40px;
-  right: 20px;
-  bottom: 0px;
-  left: 600px;
+  position: fixed;
 }
 
 button {
@@ -69,7 +65,7 @@ button:hover {
   left: 250px;
   right: 200px;
   padding: 0;
-  max-width: 600px;
+  max-width: 500px;
   margin: 0;
 }
 
