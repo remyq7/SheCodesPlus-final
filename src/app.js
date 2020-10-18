@@ -37,14 +37,7 @@ function displayWeatherCondition(response) {
     response.data.wind.speed
   );
   celciusTemperature = response.data.main.temp;
-  function showFahrenheitTemperature(event) {
-    event.preventDefault();
-    let fahrenheitTemperature = ((celsiusTemperature * 9) / 5) * 32;
 
-    let temperatureElement = document.querySelector("#temperature");
-    temperatureElement.innerHTML = fahrenheitTemperature;
-  }
-  let celciusTemperature = null;
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
     "src",
@@ -63,6 +56,14 @@ function handleSubmit(event) {
   let city = document.querySelector("#city-input").value;
   searchCity(city);
 }
+function showFahrenheitTemperature(event) {
+  event.preventDefault();
+  let fahrenheitTemperature = ((celsiusTemperature * 9) / 5) * 32;
+
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = fahrenheitTemperature;
+}
+let celciusTemperature = null;
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
 function searchLocation(position) {
