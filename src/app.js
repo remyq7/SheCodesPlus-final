@@ -89,6 +89,15 @@ function searchLocation(position) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherCondition);
 }
+let temperatureElement = document.querySelector("#temperature");
+temperatureElement.innerHTML = fahrenheitTemperature;
+function showFahrenheitTemperature(event) {
+  event.preventDefault();
+  let fahrenheitTemperature = ((celsiusTemperature * 9) / 5) * 32;
+}
+let celciusTemperature = null;
+let fahrenheit = document.querySelector("fahrenheit");
+fahrenheit.addEventListener("click", showFahrenheitTemperature);
 
 function getCurrentLocation(event) {
   event.preventDefault();
@@ -97,34 +106,3 @@ function getCurrentLocation(event) {
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 searchCity("New York");
-function displayFahrenheitTemperature(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-  let fahrenheiTemperature = (celsiusTemperature * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(fahrenheiTemperature);
-}
-
-function displayCelsiusTemperature(event) {
-  event.preventDefault();
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-}
-
-let celsiusTemperature = null;
-
-let form = document.querySelector("#search-form");
-form.addEventListener("submit", handleSubmit);
-
-let fahrenheit = document.querySelector("#fahrenheit");
-fahrenheit.addEventListener("click", displayFahrenheitTemperature);
-
-let celsius = document.querySelector("#celsius);
-celsius.addEventListener("click", displayCelsiusTemperature);
-
-
-
