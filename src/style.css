@@ -1,0 +1,87 @@
+body {
+  background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+  background-position: center;
+  background-image: fixed;
+  background-size: 100%;
+}
+h1 {
+  font-family: "Dancing Script";
+  text-align: center;
+  margin-top: 10px;
+}
+
+.city-all {
+  display: inline;
+  text-align: center;
+  margin: 5px;
+}
+.main-submit {
+  display: inline;
+  position: relative;
+  top: -40px;
+  right: 20px;
+  bottom: 0px;
+  left: 600px;
+}
+
+button {
+  position: relative;
+  top: -40px;
+  right: 20px;
+  bottom: 0px;
+  left: 650px;
+  cursor: pointer;
+}
+button:hover {
+  background: #add1f5;
+  color: #000;
+}
+
+#city {
+  background: #f785a3;
+  color: #fff;
+  font-size: 75px;
+  padding: 2px;
+}
+
+.alert-primary {
+  text-align: left;
+  margin: 0 50px;
+}
+
+.card {
+  text-align: center;
+  color: #1e79cb;
+  margin: 10px auto;
+}
+
+.weather-details {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.list-group {
+  list-style: none;
+  color: #1e79cb;
+  position: relative;
+  text-align: center;
+  top: 50px;
+  bottom: 0;
+  left: 250px;
+  right: 200px;
+  padding: 0;
+  width: 100%;
+  margin: 0;
+}
+
+.cloudy {
+  color: #f5db21;
+  font-size: 50px;
+}
+
+.sun {
+  color: #f5db21;
+  font-size: 50px;
+}
