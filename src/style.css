@@ -16,6 +16,8 @@ h1 {
   display: inline;
   position: fixed;
   margin-left: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 button {
@@ -23,6 +25,8 @@ button {
   position: fixed;
   cursor: pointer;
   margin-left: 100px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 button:hover {
   background: #add1f5;
