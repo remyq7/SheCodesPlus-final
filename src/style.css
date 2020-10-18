@@ -15,14 +15,12 @@ h1 {
 .main-submit {
   display: inline;
   position: fixed;
+  margin-left: 100px;
 }
 
 button {
-  position: relative;
-  top: -40px;
-  right: 20px;
-  bottom: 0px;
-  left: 650px;
+  display: inline;
+  position: fixed;
   cursor: pointer;
 }
 button:hover {
