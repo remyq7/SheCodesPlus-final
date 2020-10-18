@@ -68,25 +68,13 @@ function getCurrentLocation(event) {
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
-function showFahrenheitTemperature(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  let fahrenheitTemperature = ((celsiusTemperature * 9) / 5) * 32;
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-}
 function displayCelsiusTemperature() {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
-let celsiusTemperature = null;
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
 
-let fahrenheit = document.querySelector("fahrenheit");
-fahrenheit.addEventListener("click", showFahrenheitTemperature);
-
-let celsius = document.querySelector("celsius");
-celsius.addEventListener("click", displayCelsiusTemperature);
 searchCity("New York");
