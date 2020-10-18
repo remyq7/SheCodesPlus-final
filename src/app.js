@@ -59,14 +59,7 @@ function handleSubmit(event) {
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 searchCity("New York");
-function showFahrenheitTemperature(event) {
-  event.preventDefault();
-  let fahrenheitTemperature = ((celsiusTemperature * 9) / 5) * 32;
 
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = fahrenheitTemperature;
-}
-let celciusTemperature = null;
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
 function searchLocation(position) {
@@ -79,6 +72,3 @@ function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
-
-let fahrenheit = document.querySelector("fahrenheit");
-fahrenheit.addEventListener("click", showFahrenheitTemperature);
