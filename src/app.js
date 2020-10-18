@@ -57,13 +57,6 @@ function searchLocation(position) {
   axios.get(apiUrl).then(displayWeatherCondition);
 }
 
-celciusTemperature = response.data.main.temp;
-let iconElement = document.querySelector("#icon");
-iconElement.setAttribute(
-  "src",
-  `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-);
-
 function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
