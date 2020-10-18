@@ -83,6 +83,6 @@ button:hover {
   font-size: 50px;
 }
 h5 {
-  position: right;
+  text-align: right;
   margin: 10px auto;
 }
