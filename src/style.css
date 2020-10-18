@@ -63,13 +63,8 @@ button:hover {
   color: #1e79cb;
   position: relative;
   text-align: center;
-  top: 50px;
-  bottom: 0;
-  left: 250px;
-  right: 200px;
   padding: 0;
   max-width: 500px;
-  margin: 0;
 }
 
 .cloudy {
