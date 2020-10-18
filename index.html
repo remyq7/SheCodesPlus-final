@@ -23,7 +23,83 @@
   </head>
   <body>
     <div class="container">
-      <h1>True Weather in Your City</h1>
+      <form class="search-form" id="search-form">
+        <div class="city-all">
+          <div class="col-6">
+            <input
+              type="search"
+              placeholder="Type city here"
+              autofocus="on"
+              id="city-input"
+              class="form-control"
+            />
+          </div>
+          <div class="main-submit">
+            <input type="submit" value="Search" class="btn btn-light" />
+          </div>
+        </div>
+
+        <button
+          type="button"
+          class="btn btn-primary"
+          id="current-location-button"
+        >
+          Current
+        </button>
+      </form>
+      <h1 id="city"></h1>
+
+      <div class="card" style="width: 22rem">
+        <div class="card-body">
+          <h2 class="card-title">Thursday</h2>
+          <h3 class="card-text">
+            <span class="temperature" id="temperature">66 </span
+            ><span class="celsius" id="celsius"> °C </span>
+          </h3>
+          <div class="cloudy">
+            <i class="fas fa-cloud-sun"></i>
+          </div>
+        </div>
+
+        <ul class="weather-details">
+          <li><span id="description"></span></li>
+          <li>Humidity: <span id="humidity"></span>%</li>
+          <li>Wind: <span id="wind"></span>mph</li>
+        </ul>
+      </div>
+
+      <ul class="list-group list-group-horizontal">
+        <li class="list-group-item">
+          Friday
+          <p>85 °F</p>
+          <div class="sun"><i class="fas fa-sun"></i></div>
+        </li>
+        <li class="list-group-item">
+          Saturday
+          <p>80 °F</p>
+          <div class="sun"><i class="fas fa-sun"></i></div>
+        </li>
+        <li class="list-group-item">
+          Sunday
+          <p>82 °F</p>
+          <div class="sun"><i class="fas fa-sun"></i></div>
+        </li>
+        <li class="list-group-item">
+          Monday
+          <p>82 °F</p>
+          <div class="sun"><i class="fas fa-sun"></i></div>
+        </li>
+        <li class="list-group-item">
+          Tuesday
+          <p>82 °F</p>
+          <div class="sun"><i class="fas fa-sun"></i></div>
+        </li>
+        <li class="list-group-item">
+          Wednesday
+          <p>82 °F</p>
+          <div class="sun"><i class="fas fa-sun"></i></div>
+        </li>
+      </ul>
     </div>
     <script src="src/app.js"></script>
   </body>
