@@ -36,6 +36,15 @@ function displayWeatherCondition(response) {
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
+  celciusTemperature = response.data.main.temp;
+  function showFahrenheitTemperature(event) {
+    event.preventDefault();
+    let fahrenheitTemperature = ((celsiusTemperature * 9) / 5) * 32;
+
+    let temperatureElement = document.querySelector("#temperature");
+    temperatureElement.innerHTML = fahrenheitTemperature;
+  }
+  let celciusTemperature = null;
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
     "src",
@@ -66,15 +75,6 @@ function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
-celciusTemperature = response.data.main.temp;
-function showFahrenheitTemperature(event) {
-  event.preventDefault();
-  let fahrenheitTemperature = ((celsiusTemperature * 9) / 5) * 32;
-
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = fahrenheitTemperature;
-}
-let celciusTemperature = null;
 
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
