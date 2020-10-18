@@ -74,3 +74,10 @@ celciusTemperature = response.data.main.temp;
 
 let temperatureElement = document.querySelector("#temperature");
 temperatureElement.innerHTML = fahrenheitTemperature;
+function showFahrenheitTemperature(event) {
+  event.preventDefault();
+  let fahrenheitTemperature = ((celsiusTemperature * 9) / 5) * 32;
+}
+let celciusTemperature = null;
+let fahrenheit = document.querySelector("fahrenheit");
+fahrenheit.addEventListener("click", showFahrenheitTemperature);
