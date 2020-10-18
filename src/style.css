@@ -58,9 +58,10 @@ button {
 
 .row {
   list-style: none;
-  color: #1e79cb;
+  color: #1960a0;
   padding: 0;
   margin: 0px;
+  text-align: center;
 }
 
 h5 {
