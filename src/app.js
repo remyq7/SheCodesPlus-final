@@ -42,13 +42,16 @@ function displayWeatherCondition(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
 }
+
+celciusTemperature = response.data.main.temp;
 function showFahrenheitTemperature(event) {
   event.preventDefault();
-  let fahrenheitTemperature = ((14 * 9) / 5) * 32;
+  let fahrenheitTemperature = ((celsiusTemperature * 9) / 5) * 32;
 
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = fahrenheitTemperature;
 }
+let celciusTemperature = null;
 
 function searchCity(city) {
   let apiKey = "df00ce6442112c0f15afa927a09d9e5a";
