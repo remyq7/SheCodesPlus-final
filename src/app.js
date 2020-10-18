@@ -58,16 +58,11 @@ function searchLocation(position) {
 }
 
 celciusTemperature = response.data.main.temp;
-
-let temperatureElement = document.querySelector("#temperature");
-temperatureElement.innerHTML = fahrenheitTemperature;
-function showFahrenheitTemperature(event) {
-  event.preventDefault();
-  let fahrenheitTemperature = ((celsiusTemperature * 9) / 5) * 32;
-}
-let celciusTemperature = null;
-let fahrenheit = document.querySelector("fahrenheit");
-fahrenheit.addEventListener("click", showFahrenheitTemperature);
+let iconElement = document.querySelector("#icon");
+iconElement.setAttribute(
+  "src",
+  `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+);
 
 function getCurrentLocation(event) {
   event.preventDefault();
