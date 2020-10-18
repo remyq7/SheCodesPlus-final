@@ -55,8 +55,6 @@ function handleSubmit(event) {
   searchCity(city);
 }
 
-let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", handleSubmit);
 function searchLocation(position) {
   let apiKey = "df00ce6442112c0f15afa927a09d9e5a";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
@@ -78,6 +76,8 @@ function showFahrenheitTemperature(event) {
   temperatureElement.innerHTML = fahrenheitTemperature;
 }
 searchCity("New York");
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", handleSubmit);
 
 let fahrenheit = document.querySelector("fahrenheit");
 fahrenheit.addEventListener("click", showFahrenheitTemperature);
