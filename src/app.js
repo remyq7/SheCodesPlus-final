@@ -23,6 +23,7 @@ if (minutes < 10) {
 }
 
 h2.innerHTML = `${day}, ${hours}:${minutes}, `;
+let iconElement = document.querySelector("#icon");
 
 function displayWeatherCondition(response) {
   event.preventDefault();
@@ -35,6 +36,10 @@ function displayWeatherCondition(response) {
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
+  );
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
 }
 function searchCity(city) {
@@ -56,11 +61,6 @@ function searchLocation(position) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherCondition);
 }
-let iconElement = document.querySelector("#icon");
-iconElement.setAttribute(
-  "src",
-  `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-);
 
 celciusTemperature = response.data.main.temp;
 
