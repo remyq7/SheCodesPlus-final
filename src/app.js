@@ -44,6 +44,8 @@ function displayWeatherCondition(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
 }
+let temperatureElement = document.querySelector("#temperature");
+temperatureElement.innerHTML = fahrenheitTemperature;
 
 function searchCity(city) {
   let apiKey = "df00ce6442112c0f15afa927a09d9e5a";
@@ -56,9 +58,6 @@ function handleSubmit(event) {
   let city = document.querySelector("#city-input").value;
   searchCity(city);
 }
-let currentLocationButton = document.querySelector("#current-location-button");
-currentLocationButton.addEventListener("click", getCurrentLocation);
-searchCity("New York");
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
@@ -72,3 +71,6 @@ function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
+let currentLocationButton = document.querySelector("#current-location-button");
+currentLocationButton.addEventListener("click", getCurrentLocation);
+searchCity("New York");
