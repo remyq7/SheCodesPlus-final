@@ -56,7 +56,11 @@ function searchLocation(position) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherCondition);
 }
-
+let iconElement = document.querySelector("#icon");
+iconElement.setAttribute(
+  "src",
+  `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+);
 function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
@@ -66,12 +70,6 @@ currentLocationButton.addEventListener("click", getCurrentLocation);
 searchCity("New York");
 
 celciusTemperature = response.data.main.temp;
-
-let iconElement = document.querySelector("#icon");
-iconElement.setAttribute(
-  "src",
-  `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-);
 
 let temperatureElement = document.querySelector("#temperature");
 temperatureElement.innerHTML = fahrenheitTemperature;
