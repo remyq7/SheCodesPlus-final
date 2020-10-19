@@ -55,7 +55,6 @@ function displayWeatherCondition(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
-  celciusTemperature = response.data.main.temp;
 }
 
 function displayForecast(response) {
@@ -100,6 +99,7 @@ function searchLocation(position) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherCondition);
 }
+let celciusTemperature = response.data.main.temp;
 let fahrenheit = document.querySelector("fahrenheit");
 fahrenheit.addEventListener("click", showFahrenheitTemperature);
 
