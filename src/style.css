@@ -17,14 +17,10 @@ h1 {
 .main-submit {
   display: inline;
   position: relative;
-  margin-top: 10px;
-  margin-bottom: 0;
 }
 button {
   display: inline;
   position: relative;
-  margin-top: 10px;
-  margin-bottom: 0;
 }
 #city {
   background: #f785a3;
