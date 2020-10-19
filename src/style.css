@@ -20,13 +20,6 @@ h1 {
   margin: 10px 0 10px 50px;
 }
 
-button {
-  display: inline;
-  position: relative;
-  cursor: pointer;
-  margin: 10px 0 10px 150px;
-}
-
 #city {
   background: #f785a3;
   color: #fff;
