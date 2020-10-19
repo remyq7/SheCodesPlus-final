@@ -17,13 +17,13 @@ h1 {
 .main-submit {
   display: inline;
   position: relative;
-  margin: 10px 0 10px 50px;
+  margin: 10px 0 0 50px;
 }
 button {
   display: inline;
   position: relative;
   cursor: pointer;
-  margin: 10px 0 10px 150px;
+  margin: 10px 0 0 150px;
 }
 #city {
   background: #f785a3;
@@ -46,6 +46,7 @@ button {
 .weather-details {
   list-style: none;
   text-align: center;
+  color: #1e79cb;
   padding: 0;
   margin: 0 auto;
 }
