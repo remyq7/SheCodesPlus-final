@@ -12,7 +12,7 @@ h1 {
 .city-all {
   display: inline;
   text-align: center;
-  margin-bottom: 10px;
+  margin: 5px;
 }
 .main-submit {
   display: inline;
