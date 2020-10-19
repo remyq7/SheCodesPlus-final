@@ -35,6 +35,12 @@ h1 {
   text-align: center;
   color: #1e79cb;
   margin: 10px auto;
+}
+.card .active {
+  color: #1e79cb;
+  cursor: default;
+}
+.card .active:hover {
   text-decoration: none;
 }
 
