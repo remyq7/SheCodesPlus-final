@@ -35,6 +35,7 @@ h1 {
   text-align: center;
   color: #1e79cb;
   margin: 10px auto;
+  text-decoration: none;
 }
 .card .active {
   color: #1e79cb;
