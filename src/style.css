@@ -17,12 +17,12 @@ h1 {
 .main-submit {
   display: inline;
   position: relative;
-  margin: 15px 0 0 50px;
+  margin: 10px 0 0 50px;
 }
 button {
   display: inline;
   position: relative;
-  cursor: pointer;
+
   margin: 10px 0 0 150px;
 }
 #city {
