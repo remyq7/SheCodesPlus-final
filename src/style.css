@@ -39,6 +39,7 @@ button {
   text-align: center;
   color: #1e79cb;
   margin: 10px auto;
+  text-decoration-line: none;
 }
 
 .weather-details {
