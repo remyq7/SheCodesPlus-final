@@ -18,7 +18,10 @@ h1 {
   display: inline;
   position: relative;
 }
-
+button {
+  display: inline;
+  position: relative;
+}
 #city {
   background: #f785a3;
   color: #fff;
