@@ -75,13 +75,6 @@ function displayForecast(response) {
         </div>`;
   }
 }
-let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", handleSubmit);
-function searchLocation(position) {
-  let apiKey = "df00ce6442112c0f15afa927a09d9e5a";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(displayWeatherCondition);
-}
 
 function searchCity(city) {
   let apiKey = "df00ce6442112c0f15afa927a09d9e5a";
@@ -97,7 +90,13 @@ function handleSubmit(event) {
   let city = document.querySelector("#city-input").value;
   searchCity(city);
 }
-
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", handleSubmit);
+function searchLocation(position) {
+  let apiKey = "df00ce6442112c0f15afa927a09d9e5a";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayWeatherCondition);
+}
 function showFahrenheitTemperature(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
