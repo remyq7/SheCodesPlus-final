@@ -75,12 +75,12 @@ function displayForecast(response) {
         </div>`;
   }
 }
-et searchForm = document.querySelector("#search-form");
+let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
 function searchLocation(position) {
-    let apiKey = "df00ce6442112c0f15afa927a09d9e5a";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(displayWeatherCondition);
+  let apiKey = "df00ce6442112c0f15afa927a09d9e5a";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayWeatherCondition);
 }
 
 function searchCity(city) {
@@ -107,5 +107,4 @@ function showFahrenheitTemperature(event) {
 let fahrenheit = document.querySelector("fahrenheit");
 fahrenheit.addEventListener("click", showFahrenheitTemperature);
 
-l
 searchCity("New York");
