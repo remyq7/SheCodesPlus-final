@@ -52,7 +52,7 @@ button {
   margin: 0 auto;
 }
 
-.row {
+#forecast {
   list-style: none;
   color: #124069;
   padding: 0;
